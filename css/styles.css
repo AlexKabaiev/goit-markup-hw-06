@@ -36,6 +36,19 @@ ul {
   margin: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -288,27 +301,6 @@ section {
 .work-thumb {
   position: relative;
 }
-
-/* .work-thumb::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 70px;
-  bottom: 0;
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
-.work-meta {
-  position: absolute;
-  bottom: 27px;
-  left: 107px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--color-white);
-} */
 
 .work-thumb>.work-meta {
   position: absolute;
@@ -688,7 +680,7 @@ section {
   justify-content: center;
   background-color: var(--color-white);
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
@@ -698,11 +690,8 @@ section {
 }
 
 /* Форма */
-.form-data {
-  padding: 40px;
-}
-
 .form-title {
+  padding-top: 40px;
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
@@ -710,6 +699,11 @@ section {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--color-brand);
+}
+
+.form-field {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .form-label {
@@ -730,7 +724,7 @@ section {
 .form-input {
   width: 100%;
   height: 40px;
-  padding: 12px 12px 12px 32px;
+  padding: 11px 12px 11px 38px;
   border: 1px solid var(--input-border);
   border-radius: 4px;
   outline: none;
@@ -768,13 +762,53 @@ section {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.form-textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
 /* Checkbox */
-.checkbox-label {
+
+.form-field-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-primary);
+}
+
+.checkbox-input {
+  appearance: none;
+}
+.checkbox-label {
+position: relative;
+}
+
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--color-brand);
+  border-radius: 2px;
+  content: '';
+}
+
+.checkbox-icon {
+opacity: 0;
+border-radius: 2px;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--color-accent);
+  fill: var(--color-white);
+  opacity: 1;
 }
 
 /* Кнопка отправить */

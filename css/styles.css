@@ -860,8 +860,8 @@ section {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-primary);
-  margin-left: 7px;
-  margin-right: 7px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .checkbox-icon {

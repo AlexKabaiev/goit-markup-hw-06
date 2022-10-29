@@ -600,6 +600,7 @@ section {
 .footer-box-social {
   display: block;
   margin-left: 70px;
+  margin-right: 93px;
 }
 
 .footer-social-text {
@@ -638,14 +639,37 @@ section {
 
 /* Стилизация формы в подвале */
 
-.footer-form-send {
-  display: block;
+.footer-form-field {
+  display: flex;
+  align-items:flex-end ;
+  justify-content: center;
+  gap: 12px;
 }
 
 .footer-form-label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  padding-bottom: 20px;
 }
 
-.footer-form-label::placeholder {
+.footer-form-input {
+  width: 100%;
+  height: 50px;
+  padding: 15px 16px 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--color-accent);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--color-background-footer);
+  outline: none;
+}
+
+.footer-form-input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -653,26 +677,17 @@ section {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-form-input {
-}
-
-.send-control {
+.send-button {
   display: flex;
-  position: relative;
   align-items: center;
   justify-content: center;
-}
-
-.send-button {
+  gap: 10px;
   width: 200px;
   height: 50px;
   border: 0;
   border-radius: 4px;
   margin: 0 auto;
   background-color: var(--color-accent);
-
-  display: block;
-  text-align: center;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;

@@ -841,7 +841,7 @@ section {
 
 /* Checkbox */
 
-.form-field-checkbox {
+.checkbox-container {
   position: relative;
   display: flex;
   align-items: center;
@@ -854,14 +854,14 @@ section {
 }
 
 .checkbox-label {
-  display: block;
+  display: inline-block;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-primary);
-  padding-left: 7px;
-  padding-right: 7px;
+  margin-right: 7px;
+  margin-left: 7px;
 }
 
 .checkbox-icon {
@@ -877,6 +877,14 @@ section {
 .checkbox-input:checked + .checkbox-icon {
   background-color: var(--color-accent);
   border: 0;
+}
+
+.form-contract {
+font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--color-accent);
 }
 
 /* Кнопка отправить */

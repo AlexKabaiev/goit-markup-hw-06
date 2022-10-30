@@ -658,7 +658,7 @@ section {
 }
 
 .footer-form-input {
-  width: 100%;
+  width: 358px;
   height: 50px;
   padding: 15px 16px 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -840,51 +840,53 @@ section {
 }
 
 /* Checkbox */
-
 .checkbox-container {
-  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
 .checkbox-input {
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
 }
 
 .checkbox-label {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--color-primary);
-  margin-right: 7px;
-  margin-left: 7px;
 }
 
-.checkbox-icon {
-  position: absolute;
-  top: 50%;
-  left: 54px;
-  transform: translateY(-50%);
+.checkbox-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white);
+  width: 16px;
+  height: 15px;
   border: 2px solid var(--color-brand);
   border-radius: 2px;
-  fill: var(--color-white);
+  transition: border-color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 }
 
-.checkbox-input:checked + .checkbox-icon {
+.checkbox-input:checked + .checkbox-box {
   background-color: var(--color-accent);
   border: 0;
 }
 
 .form-contract {
-font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: 0.03em;
   color: var(--color-accent);
+}
+
+.checkbox-icon {
+  fill: var(--color-white);
 }
 
 /* Кнопка отправить */
